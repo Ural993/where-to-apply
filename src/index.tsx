@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import './index.css';
+import './fonts/OnestMedium1602-hint.ttf';
+import './fonts/OnestRegular1602-hint.ttf';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

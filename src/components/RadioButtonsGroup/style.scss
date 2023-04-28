@@ -1,0 +1,19 @@
+.radio-group-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.radio{
+    background: #F5F5F5;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    min-width: 252px;
+    height: 56px;
+    cursor: pointer;
+}
