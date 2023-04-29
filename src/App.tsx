@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.css';
 import { Modal } from 'components/Modal/Modal';
 
+export type AllValueType = {
+  title: string;
+  option: string | string[];
+};
+
 const App = (): any => {
+  const [allValue, setAllValue] = useState<AllValueType[]>([]);
+
+  const onChange = (value: AllValueType) => {
+    setAllValue([...allValue, value]);
+  };
+
+  useEffect(() => {
+    console.log(allValue);
+  }, [allValue]);
+
   const data = [
     {
       title: 'Для кого вы ищете учебное заведение?',
@@ -33,7 +48,7 @@ const App = (): any => {
 
   return (
     <div className="App">
-      <Modal modalData={data} />
+      <Modal modalData={data} onChange={onChange} />
     </div>
   );
 };
